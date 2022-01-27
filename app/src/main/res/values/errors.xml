@@ -1,0 +1,42 @@
+<resources>
+    <string name="field_not_null">Field cannot be empty</string>
+    <string name="field_not_empty">Field cannot be empty</string>
+
+    <string name="phone_4_or_10_numbers">Phone must have 4 or 10 numbers</string>
+    <string name="phone_numbers_only">Phone is only numbers</string>
+
+    <string name="gender_not_valid">Select a gender</string>
+
+    <string name="height_too_small">Height too small (&gt;80)</string>
+    <string name="height_too_big">Height too big (&lt;220)</string>
+
+    <string name="weight_too_small">Weight too small (&gt;30) </string>
+    <string name="weight_too_big">Weight too big (&lt;180) </string>
+
+    <string name="bmi_deadly">bmi is deadly overweight</string>
+    <string name="bmi_high">bmi is highly overweight</string>
+    <string name="bmi_moderate">bmi is moderately overweight</string>
+    <string name="bmi_overweight">bmi is overweight</string>
+    <string name="bmi_standard">bmi is standard</string>
+    <string name="bmi_underweight">bmi is underweight</string>
+    <string name="bmi_starvation">bmi is starvation</string>
+
+    <string name="startday_not_set">Start day is not set</string>
+
+    <string name="objective_mandatory">Select an objective</string>
+
+    <string name="duration_too_short">Duration too short (&lt; 3 days) </string>
+    <string name="duration_too_long">Duration too long (&gt; 7 days) </string>
+
+    <string name="team_minimum_too_small">Minimum too small (&lt; 3) </string>
+    <string name="team_minimum_sup_maximum">Minimum &gt; Maximum </string>
+    <string name="team_maximum_too_big">Maximum too big (&gt; 9) </string>
+    <string name="team_maximum_inf_minimum">Maximum &lt; Minimum </string>
+
+    <string name="team_without_leader">Team don\'t have a leader </string>
+
+    <string name="team_without_member">Team don\'t have a member </string>
+    <string name="team_not_enough_members">Team don`t have enough members </string>
+    <string name="team_too_much_members">Team have too much members </string>
+
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cocktail_navigation"
+    app:startDestination="@id/navigation_splash">
+    <fragment
+        android:id="@+id/my_cocktailsList"
+        android:name="fr.uha.hassenforder.teams.ui.cocktail.CocktailListFragment"
+        android:label="my_cocktailsList"
+        tools:layout="@layout/my_cocktails_list_fragment" />
+    <fragment
+        android:id="@+id/navigation_cocktailList"
+        android:name="fr.uha.hassenforder.teams.ui.cocktail.CocktailListFragment"
+        android:label="my_cocktails_list_fragment"
+        tools:layout="@layout/my_cocktails_list_fragment" >
+        <action
+            android:id="@+id/action_navigation_cocktailList_to_navigation_cocktail"
+            app:destination="@id/navigation_cocktail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_ingredientList"
+        android:name="fr.uha.hassenforder.teams.ui.ingredient.IngredientListFragment"
+        android:label="my_ingredients_list_fragment"
+        tools:layout="@layout/my_cocktails_list_fragment" >
+
+        <argument
+            android:name="id"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_cocktail"
+        android:name="fr.uha.hassenforder.teams.ui.cocktail.CocktailFragment"
+        android:label="cocktail_fragment"
+        tools:layout="@layout/cocktail_fragment">
+        <argument
+            android:name="id"
+            android:defaultValue="0L"
+            app:argType="long" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="fr.uha.hassenforder.teams.ui.splash.SplashFragment"
+        android:label="splash_fragment"
+        tools:layout="@layout/splash_fragment" />
+
+</navigation>

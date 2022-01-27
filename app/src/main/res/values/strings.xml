@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Teams</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_splash">upcoming</string>
+
+    <string name="title_cocktails_list">Cocktails</string>
+    <string name="title_ingredients_list">Mes ingrédients</string>
+    <string name="title_cocktails_available_list"> Mes cocktails</string>
+    <string name="title_team_list">team list</string>
+    <string name="title_person_list">person list</string>
+    <string name="title_person_edit">edit person %1$s</string>
+    <string name="title_team_edit">edit team %1$s</string>
+    <string name="title_skill_picker">Choose a skill</string>
+    <string name="title_date_picker">Choose a date</string>
+    <string name="title_person_picker">Chose a person</string>
+
+    <string name="permissions_store_required">Please allow to store pictures in the phone</string>
+
+    <string name="menu_save">save</string>
+    <string name="menu_populate">populate</string>
+
+    <string name="girl">girl</string>
+    <string name="boy">boy</string>
+    <string name="gender">gender</string>
+    <string name="firstName">first name</string>
+    <string name="lastName">last name</string>
+    <string name="phone">phone number</string>
+    <string name="nodate">no date</string>
+    <string name="leader">leader</string>
+    <string name="members">members</string>
+    <string name="height">height</string>
+    <string name="weight">weight</string>
+    <string name="bmi">body mass index</string>
+    <plurals name="leader_count">
+        <item quantity="zero">no lead</item>
+        <item quantity="one">lead 1 team</item>
+        <item quantity="other">lead %1s teams</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="zero">no member</item>
+        <item quantity="one">member of 1 team</item>
+        <item quantity="other">member of %1s teams</item>
+    </plurals>
+
+    <string name="no">no</string>
+    <string name="teamName">team name</string>
+    <string name="startDay">start day</string>
+    <string name="duration">duration</string>
+    <string name="objective">objective</string>
+    <string name="max">maximum members</string>
+    <string name="min">minimum members</string>
+    <string name="cocktailName">cocktailName</string>
+</resources>

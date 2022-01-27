@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.person.PersonFragment">
+
+    <data>
+        <import type="fr.uha.hassenforder.teams.model.Gender" />
+        <variable name="vm" type="fr.uha.hassenforder.teams.ui.person.PersonViewModel" />
+        <variable name="takePicture" type="android.view.View.OnClickListener" />
+        <variable name="addSkill" type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp">
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/firstName" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="@string/firstName" app:error="@{vm.firstNameValidator}" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName" android:text="@={vm.firstName}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/lastName"
+                app:error="@{vm.lastNameValidator}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="@={vm.lastName}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                app:error="@{vm.phoneValidator}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:text="@={vm.phone}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <fr.uha.hassenforder.teams.view.FieldInputLayout
+                android:id="@+id/gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:error="@{vm.genderValidator}"
+                app:hint="@string/gender"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phone">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/no"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{vm.gender == Gender.NO}"
+                        android:onClick="@{() -> vm.setGender(Gender.NO)}"
+                        android:text="@string/no" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/girl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{vm.gender == Gender.GIRL}"
+                        android:onClick="@{() -> vm.setGender(Gender.GIRL)}"
+                        android:text="@string/girl" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/boy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="@{vm.gender == Gender.BOY}"
+                        android:onClick="@{() -> vm.setGender(Gender.BOY)}"
+                        android:text="@string/boy" />
+                </RadioGroup>
+
+            </fr.uha.hassenforder.teams.view.FieldInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/height"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/height"
+                app:error="@{vm.heightValidator}"
+                app:layout_constraintEnd_toStartOf="@+id/weight"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gender">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="@={vm.height}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/weight"
+                app:error="@{vm.weightValidator}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/height"
+                app:layout_constraintTop_toTopOf="@+id/height">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="@={vm.weight}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bmi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/bmi"
+                app:error="@{vm.bmiValidator}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weight">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:text="@{vm.bmi.toString()}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/skills"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bmi" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="@{(view) -> addSkill.onClick(view)}"
+                android:src="@drawable/ic_baseline_add_24"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="@+id/skills"
+                app:layout_constraintEnd_toEndOf="@+id/skills"
+                tools:ignore="SpeakableTextPresentCheck, ContentDescription" />
+
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:onClick="@{(view) -> takePicture.onClick(view)}"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_baseline_person_24"
+                app:avatar="@{vm.avatar}"
+                app:highRes="@{vm.highRes}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/skills"
+                app:lowRes="@{vm.lowRes}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

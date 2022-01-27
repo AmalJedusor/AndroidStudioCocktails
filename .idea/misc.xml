@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/layout/activity_main.xml" value="0.13697916666666668" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/layout/cocktail_fragment.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/layout/my_cocktails_item.xml" value="0.1296875" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/layout/my_cocktails_list_fragment.xml" value="0.13697916666666668" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/layout/my_ingredients_fragment.xml" value="0.125" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/layout/my_ingredients_item.xml" value="0.4" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/layout/my_ingredients_list_fragment.xml" value="0.125" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/layout/person_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/layout/person_item.xml" value="0.13697916666666668" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/layout/person_list_fragment.xml" value="0.1743659420289855" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/menu/cocktail_menu.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/menu/cocktails_bottom_nav_menu.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/menu/cocktails_menu.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/menu/ingredients_menu.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/menu/person_menu.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/amalm/AndroidStudioProjects/android-2021/app/src/main/res/menu/persons_menu.xml" value="0.19114583333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

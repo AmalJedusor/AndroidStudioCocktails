@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/my_cocktailsList"
+        android:icon="@drawable/ic_baseline_group_24"
+        android:title="@string/title_cocktails_available_list" />
+
+    <item
+        android:id="@+id/navigation_cocktailList"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/title_cocktails_list" />
+
+    <item
+        android:id="@+id/navigation_ingredientList"
+        android:icon="@drawable/ic_baseline_group_24"
+        android:title="@string/title_ingredients_list" />
+</menu>

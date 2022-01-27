@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="durations">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>7</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="objectives">
+        <item>excellence</item>
+        <item>high ROI</item>
+        <item>high reliability</item>
+        <item>high speed</item>
+        <item>high security</item>
+        <item>low cost</item>
+        <item>low latency</item>
+        <item>prototype</item>
+        <item>market study</item>
+    </string-array>
+</resources>

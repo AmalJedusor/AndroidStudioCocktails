@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_splash">
+
+    <fragment
+        android:id="@+id/navigation_personList"
+        android:name="fr.uha.hassenforder.teams.ui.person.PersonListFragment"
+        android:label="@string/title_person_list"
+        tools:layout="@layout/person_list_fragment">
+        <action
+            android:id="@+id/action_navigation_personList_to_person"
+            app:destination="@id/navigation_person" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_person"
+        android:name="fr.uha.hassenforder.teams.ui.person.PersonFragment"
+        tools:layout="@layout/person_fragment">
+        <argument
+            android:name="id"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_navigation_person_to_skillPicker"
+            app:destination="@id/navigation_skillPicker" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_teamList"
+        android:name="fr.uha.hassenforder.teams.ui.team.TeamListFragment"
+        android:label="@string/title_team_list">
+        <action
+            android:id="@+id/action_navigation_teamList_to_team"
+            app:destination="@id/navigation_team" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_team"
+        android:name="fr.uha.hassenforder.teams.ui.team.TeamFragment"
+        tools:layout="@layout/team_fragment" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_navigation_team_to_datePicker"
+            app:destination="@id/navigation_datePicker" />
+        <action
+            android:id="@+id/action_navigation_team_to_personPicker"
+            app:destination="@id/navigation_personPicker" />
+    </fragment>
+    <dialog
+        android:id="@+id/navigation_datePicker"
+        android:name="fr.uha.hassenforder.teams.ui.picker.DatePickerFragment"
+        android:label="@string/title_date_picker" >
+        <argument
+            android:name="date"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <argument
+            android:name="requestKey"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="title"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </dialog>
+    <dialog
+        android:id="@+id/navigation_personPicker"
+        android:name="fr.uha.hassenforder.teams.ui.picker.PersonPickerFragment"
+        android:label="@string/title_person_picker">
+
+        <argument
+            android:name="requestKey"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="title"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </dialog>
+    <dialog
+        android:id="@+id/navigation_skillPicker"
+        android:name="fr.uha.hassenforder.teams.ui.picker.SkillPickerFragment"
+        android:label="@string/title_skill_picker">
+
+        <argument
+            android:name="requestKey"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="title"
+            app:argType="integer"
+            android:defaultValue="0" />
+
+    </dialog>
+
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="fr.uha.hassenforder.teams.ui.splash.SplashFragment"
+        android:label="splash_fragment"
+        tools:layout="@layout/splash_fragment" />
+
+</navigation>
